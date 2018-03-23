@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>edit page</title>
+</head>
+<body>
+<form action="/my_app/edit/action" method="post">
+    {% csrf_token %}
+        <input type="hidden" name="article_id"      value="{{ article.id | default:'0'}}" >
+        <label>
+                Title:<input type="text" name="tittle"   value="{{ article.tittle}} " >
+        </label>
+            <br>
+         <label>
+                Content:<input type="text" name="content"  value="{{ article.content}} " >
+        </label>
+        <br>
+
+    <button type="submit">Submit</button>
+</form>
+</body>
+</html>

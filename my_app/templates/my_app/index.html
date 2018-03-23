@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<a href="/my_app/edit/0"><h3>编写新文章</h3></a>
+{% for article in articles %}
+   <a href="/my_app/article/{{ article.id }}"><h1>{{ article.tittle }}</h1></a>
+    <p>{{ article.content }}</p>
+{% endfor %}
+</body>
+</html>
